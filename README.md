@@ -26,10 +26,10 @@ My pipeline consisted of 5 steps:
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by:
 
-Calculated slope and center of each line. <br>
-Then based on the slope, sort it into right or left lane line<br>
-Calculate the average slope and the center of right and left lane<br>
-Then using the Y coordinates, based on Region of Interest, figure out the X cordinates using the avg slope and center point of lane lines [equation used: (y-y') = M (x-x')]
+* Calculated slope and center of each line. <br>
+* Then based on the slope, sort it into right or left lane line<br>
+* Calculate the average slope and the center of right and left lane<br>
+* Then using the Y coordinates, based on Region of Interest, figure out the X cordinates using the avg slope and center point of lane lines [equation: (y-y') = M (x-x')]
 
 The explaination of this equation: (y-y') = M (x-x') is as follows:<br>
 y is equal with ymax and y' is equal with y_avg.<br>
@@ -55,15 +55,15 @@ Then put above xmax into draw_lines function and calculate the xmax and xmin cor
 
 Potential shortcomings of my approach:
 
-The region of interest in Image masking is static, hence it can only work in specific scenarios
+* The region of interest in Image masking is static, hence it can only work in specific scenarios
 
-Slope conditions used for detecting right and left lanes do not work in case of a curve in the road
+* Slope conditions used for detecting right and left lanes do not work in case of a curve in the road
 
 
 ###3. Suggest possible improvements to your pipeline
 
 Possible improvements to my approach:
 
-Make the image mask selection dynamic, so that it could work in different scenarios
+* Make the image mask selection dynamic, so that it could work in different scenarios
 
-Modify the slope conditions, so that they work with curve in the road
+* Modify the slope conditions, so that they work with curve in the road
